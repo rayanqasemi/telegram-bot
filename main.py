@@ -235,7 +235,7 @@ async def process_and_send(update: Update, context: ContextTypes.DEFAULT_TYPE, u
 
 def main():
     print("Starting bot…")
-    app = Application.builder().token("8421302968:AAEuooHWLzowu5OVXXKRgj-NFA5XXAC2DoE").build()
+    app = Application.builder().token("BOT_TOKEN").build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.AUDIO, handle_audio))
     app.add_handler(CallbackQueryHandler(handle_callback))
