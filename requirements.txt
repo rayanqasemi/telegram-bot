@@ -1,0 +1,5 @@
+flask
+python-telegram-bot==20.6
+Pillow
+mutagen
+pydub
