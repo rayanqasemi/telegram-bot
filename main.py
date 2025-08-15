@@ -233,9 +233,11 @@ async def process_and_send(update: Update, context: ContextTypes.DEFAULT_TYPE, u
         user_title.pop(user_id, None)
         user_artist.pop(user_id, None)
 
+import os  # make sure this is at the top of your file
+
 def main():
     print("Starting bot…")
-    app = Application.builder().token("BOT_TOKEN").build()
+    app = Application.builder().token(os.environ["BOT_TOKEN"]).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.AUDIO, handle_audio))
     app.add_handler(CallbackQueryHandler(handle_callback))
